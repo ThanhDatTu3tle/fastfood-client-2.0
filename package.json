@@ -24,7 +24,9 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "redux-actions": "^2.6.5",
+    "redux-logger": "^3.0.6",
     "redux-saga": "^1.2.2",
+    "redux-starter-kit": "^2.0.0",
     "sweetalert2": "^11.6.16",
     "sweetalert2-react-content": "^5.0.7",
     "tippy.js": "^6.3.7",
@@ -58,6 +60,7 @@
   "devDependencies": {
     "@types/node-sass": "^4.11.3",
     "@types/redux-actions": "^2.6.2",
+    "@types/redux-logger": "^3.0.9",
     "dotenv-webpack": "^8.0.1"
   }
 }
