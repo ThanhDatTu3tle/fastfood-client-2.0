@@ -5,14 +5,14 @@ import styles from './HighLights.module.scss';
 
 const cx = classNames.bind(styles)
 
-const HighLightItem: React.FC<any> = ({ title, to, icon }) => {
+const BestSeller: React.FC<any> = ({ title, to, icon }) => {
     return (
-        <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to={to}>
-            <div className={cx('hover')}>
+        <NavLink className={(nav) => cx('menu-item-bestseller', { active: nav.isActive })} to={to}>
+            <div className={cx('hover-bestseller')}>
                 {title}
             </div>
         </NavLink>
     )
 }
 
-export default HighLightItem;
+export default BestSeller;
