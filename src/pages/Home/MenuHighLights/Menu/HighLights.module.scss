@@ -1,0 +1,45 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100%;
+      justify-content: space-between;
+      text-decoration: none;
+      background-color: transparent;
+      cursor: pointer;
+  
+      &.active {
+        color: white;
+      }
+  
+      &:hover {
+        color: white;
+      }
+  
+      &:hover .hover {
+        background-color: #ff5b6a;
+  
+        &.active {
+          color: white;
+        }
+      }
+
+      .hover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  
