@@ -6,6 +6,7 @@ import styles from './Home.module.scss';
 import config from '../../config';
 import HighLights from './MenuHighLights/MenuHighLights';
 import Title from '../../components/Title';
+import Product from '../../components/Product';
 
 const cx = classNames.bind(styles)
 
@@ -29,7 +30,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
                 <div className={cx('content')}>
-
+                    <Product />
                 </div>
             </div>
         </div>
