@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import classNames from "classnames/bind";
-import axios from 'axios';
 
 import styles from './Product.module.scss';
 import Image from "../Image";
@@ -12,14 +11,21 @@ const Product: React.FC<any> = ({ data }) => {
 
     return (
         <div className={cx('wrapper')}>
-            <Image src={data.image}/>
-            <h3>
-                <a title="Combo Sum Vầy 1" href="/category/product">Combo Sum Vầy 1</a>
-            </h3>
-            <span>02 Fried Chicken</span>
-            <span>01 Shrim Burger</span>
-            Price
-            <Button primary>Add to cart</Button>
+            <div className={cx('inner')}>
+                <Image src={data.image}/>
+                <h3>
+                    <a title="Combo Sum Vầy 1" href="/category/product">{data.name}</a>
+                </h3>
+                <div className={cx('descriptions')}>
+                    {data.description.map((content: string) => (
+                        <div className={cx('description')}>{content}</div>
+                    ))}
+                </div>
+                <div className={cx('product-price')}>
+                    {data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}đ
+                </div>
+                <Button primary>Add to cart</Button>
+            </div>
         </div>
     )
 }

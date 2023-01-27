@@ -47,7 +47,7 @@ const Home: React.FC<any> = () => {
                         <>
                             <div className={cx('products')}>
                                 {products.map((data) => (
-                                    <Product data={data} />
+                                    <Product key={data} data={data} />
                                 ))}
                             </div>
                         </>
