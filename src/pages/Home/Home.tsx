@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import classNames from "classnames/bind";
 
@@ -10,7 +12,18 @@ import Product from '../../components/Product';
 
 const cx = classNames.bind(styles)
 
-const Home: React.FC = () => {
+const Home: React.FC<any> = () => {
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+      fetch(`${process.env.REACT_APP_SERVER_BASE_URL}product`)
+        .then((response) => response.json())
+        .then((data) => {
+          setProducts(data);
+        });
+    }, []);
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('top-highlight')}>
@@ -30,7 +43,18 @@ const Home: React.FC = () => {
                     </div>
                 </div>
                 <div className={cx('content')}>
-                    <Product />
+                    {products !== null ? (
+                        <>
+                            <div className={cx('products')}>
+                                {products.map((data) => (
+                                    <Product data={data} />
+                                ))}
+                            </div>
+                        </>
+                        ) : (
+                        <></>
+                        )
+                    }
                 </div>
             </div>
         </div>
