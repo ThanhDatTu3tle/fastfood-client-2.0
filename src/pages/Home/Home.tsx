@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import classNames from "classnames/bind";
 
@@ -56,6 +55,34 @@ const Home: React.FC<any> = () => {
                         )
                     }
                 </div>
+            </div>
+
+            <div className={cx('news')}>
+                <div className={cx('title')}>
+                    <Title content='NEWS'/>
+
+                    <div className={cx('see-all')}>
+                        <Link to={config.routes.promotion}>
+                            <button className={cx('btn-see-all')}>
+                                See all →
+                            </button>
+                        </Link>                     
+                    </div>
+                </div>
+                {/* <div className={cx('content')}>
+                    {products !== null ? (
+                        <>
+                            <div className={cx('products')}>
+                                {products.map((data) => (
+                                    <Product key={data} data={data} />
+                                ))}
+                            </div>
+                        </>
+                        ) : (
+                        <></>
+                        )
+                    }
+                </div> */}
             </div>
         </div>
     )

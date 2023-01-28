@@ -1,0 +1,11 @@
+export { default } from './List';
+export { default as BestSeller } from './BestSeller';
+export { default as Promotion } from './Promotion';
+export { default as Chicken } from './Chicken';
+export { default as ChickenSet } from './ChickenSet';
+export { default as Burger } from './Burger';
+export { default as Combo } from './Combo';
+export { default as RiceAndSpaghetti } from './RiceAndSpaghetti';
+export { default as Dessert } from './Dessert';
+export { default as Pack } from './Pack';
+export { default as Drinks } from './Drinks';

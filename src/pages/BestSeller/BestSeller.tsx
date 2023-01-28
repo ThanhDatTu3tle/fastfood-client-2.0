@@ -1,26 +1,13 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
 import classNames from "classnames/bind";
 
-import styles from './Promotion.module.scss';
+import styles from './BestSeller.module.scss';
 import MenuList from '../../layouts/components/MenuList/MenuList';
-import Product from '../../components/Product';
 import Title from '../../components/Title';
 
 const cx = classNames.bind(styles)
 
-const Promotion: React.FC = () => {
-
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-      fetch(`${process.env.REACT_APP_SERVER_BASE_URL}product`)
-        .then((response) => response.json())
-        .then((data) => {
-          setProducts(data);
-        });
-    }, []);
-
+const BestSeller: React.FC = () => {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('menu-list')}>
@@ -28,8 +15,8 @@ const Promotion: React.FC = () => {
             </div>
 
             <div className={cx('special-promotion')}>
-                <Title content='PROMOTION'/>
-                <div className={cx('content')}>
+                <Title content='BESTSELLER'/>
+                {/* <div className={cx('content')}>
                     {products !== null ? (
                         <>
                             <div className={cx('products')}>
@@ -42,10 +29,10 @@ const Promotion: React.FC = () => {
                         <></>
                         )
                     }
-                </div>
+                </div> */}
             </div>
         </div>
     )
 }
 
-export default Promotion;
+export default BestSeller;
