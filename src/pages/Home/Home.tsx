@@ -16,12 +16,13 @@ const Home: React.FC<any> = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-      fetch(`${process.env.REACT_APP_SERVER_BASE_URL}product`)
-        .then((response) => response.json())
-        .then((data) => {
-          setProducts(data);
-        });
-    }, []);
+        fetch(`${process.env.REACT_APP_SERVER_BASE_URL}category/63d133ab7abbc1799c72eeb4`)
+          .then((response) => response.json())
+          .then((data) => {
+            setProducts(data.products);
+            console.log(data.products)
+          });
+      }, []);
 
     return (
         <div className={cx('wrapper')}>
