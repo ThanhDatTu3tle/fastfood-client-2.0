@@ -1,5 +1,8 @@
 import * as React from 'react';
 import classNames from "classnames/bind";
+import Backdrop from '@mui/material/Backdrop';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 import styles from './Options.module.scss';
 import Image from '../../../../components/Image';
