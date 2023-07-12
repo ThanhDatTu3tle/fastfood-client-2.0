@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import classNames from "classnames/bind";
+import Skeleton from 'react-loading-skeleton';
 
 import styles from './Promotion.module.scss';
 import MenuList from '../../layouts/components/MenuList/MenuList';
@@ -35,8 +36,8 @@ const Promotion: React.FC = () => {
                         <>
                             <div className={cx('products')}>
                                 {products.map((data) => (
-                                    <Product key={data} data={data} />
-                                ))}
+                                    <Product key={data} data={data} /> 
+                                )) || <Skeleton height={300} duration={5} containerClassName="flex-1"/>}
                             </div>
                         </>
                         ) : (

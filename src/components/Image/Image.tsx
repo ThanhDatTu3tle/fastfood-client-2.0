@@ -2,6 +2,7 @@ import { useState, forwardRef } from "react";
 // import { Link } from "react-router-dom";
 import styles from './Image.module.scss';
 import classNames from 'classnames';
+import Skeleton from 'react-loading-skeleton';
 
 // fallback: customFallback = images.icon_profile,
 const Image: React.FC<any> = forwardRef(({ 
@@ -30,7 +31,7 @@ const Image: React.FC<any> = forwardRef(({
     <img 
       className={classNames(styles.wrapper, className)} 
       ref={ref} 
-      src={fallback || src} 
+      src={fallback || src || <Skeleton height={300} duration={5}/>} 
       // src={src} 
       alt={alt} 
       href={href}
