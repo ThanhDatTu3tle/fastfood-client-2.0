@@ -19,3 +19,163 @@
     background-color: transparent;
     box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
 }
+
+.login-form {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    width: 35%;
+    height: 45%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    color: #142F43;
+}
+
+.input-textfield {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    -webkit-border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 2rem 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ff5b6a;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.right {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.close-btn {
+    position: absolute;
+    right: 710px;
+    top: 300px;
+    float: none;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+    background: #ff5b6a;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    opacity: 1;
+    text-shadow: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #495057;
+    }
+}
+
+.icon-info {
+    width: 19px;
+    height: 19px;
+    background: url(https://www.lotteria.vn/grs-static/images/icon-info.svg);
+    cursor: pointer;
+}
+
+.login-others {
+    padding-top: 30px;
+    padding-bottom: 3px;
+}
+
+.login-others .txt:before {
+    content: "";
+    width: 16%;
+    height: 1px;
+    background-color: rgba(179,179,179,.5);
+    position: absolute;
+    left: 1;
+    right: 1;
+    top: 57%;
+    z-index: 1;
+}
+
+.login-others .txt span {
+    background-color: #fff;
+    padding: 3px 10px;
+    margin-left: 90px;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.others-options {
+    display: flex;
+    flex-direction: row;
+    flex: 1 33%;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: fit-content;
+
+    .btn-fb {
+        display: block;
+        border: none;
+        width: 75px;
+        height: 75px;
+        background-color: #fff;
+        box-shadow: 1px 1px 3px rgba(0,0,0,.15);
+        -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.15);
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #142f43;
+        white-space: nowrap;
+        font-size: 12px;
+        background-image: url(https://www.lotteria.vn/grs-static/images/icon-fb.svg);
+        background-position: 50% 7px;
+        background-repeat: no-repeat;
+        padding-top: 40px;
+        cursor: pointer;
+    }
+
+    .btn-gg {
+        display: block;
+        border: none;
+        width: 75px;
+        height: 75px;
+        background-color: #fff;
+        box-shadow: 1px 1px 3px rgba(0,0,0,.15);
+        -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.15);
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #142f43;
+        white-space: nowrap;
+        font-size: 12px;
+        background-image: url(https://www.lotteria.vn/grs-static/images/icon-google.svg);
+        background-position: 50% 7px;
+        background-repeat: no-repeat;
+        padding-top: 40px;
+        cursor: pointer;
+    }
+}

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import classNames from "classnames/bind";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import styles from './RiceAndSpaghetti.module.scss';
 import MenuList from '../../layouts/components/MenuList/MenuList';
@@ -18,7 +20,6 @@ const RiceAndSpaghetti: React.FC = () => {
         .then((response) => response.json())
         .then((data) => {
           setProducts(data.products);
-          console.log(data.products)
         });
     }, []);
 
@@ -36,7 +37,7 @@ const RiceAndSpaghetti: React.FC = () => {
                             <div className={cx('products')}>
                                 {products.map((data) => (
                                     <Product key={data} data={data} />
-                                ))}
+                                )) || <Skeleton height={300} duration={5} baseColor="#202020" highlightColor="#444" containerClassName="flex-1"/>}
                             </div>
                         </>
                         ) : (

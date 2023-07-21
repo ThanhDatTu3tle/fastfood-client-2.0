@@ -24,11 +24,7 @@ const App: React.FC = () => {
             const Page = route.component;
 
             let Layout = MainLayout;
-
-            // MainLayout là layout chính, luôn có Header và Footer
-            // if else để đây mục đích là để nếu có layout nào của website
-            // mà kh nhất thiết phải có Header và Footer
-            // thì thay layout = null => render ra <Fragment />
+            
             if (route.layout) {
               Layout = route.layout;
             } else if (route.layout === null) {

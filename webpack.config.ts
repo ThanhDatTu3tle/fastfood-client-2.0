@@ -1,5 +1,5 @@
-const Dotenv = require("dotenv-webpack");
-const CircularDependencyPlugin = require('circular-dependency-plugin');
+import Dotenv from "dotenv-webpack";
+import CircularDependencyPlugin from 'circular-dependency-plugin';
 
 module.exports = {
   entry: "./src/index",

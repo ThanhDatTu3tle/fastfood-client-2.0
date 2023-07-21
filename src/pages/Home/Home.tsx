@@ -20,7 +20,7 @@ const Home: React.FC<any> = () => {
           .then((response) => response.json())
           .then((data) => {
             setProducts(data.products);
-            console.log(data.products)
+            // console.log(data.products)
           });
       }, []);
 
